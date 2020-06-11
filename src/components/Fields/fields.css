@@ -1,0 +1,19 @@
+.fields-selector {
+  height: 200px;
+  margin: 20px;
+  padding: 10px;
+  display: table;
+}
+
+.fields-selector>h3 {
+  text-align: center;
+}
+
+button.field {
+  background: darkblue;
+  margin: 5px;
+  padding: 5px;
+  color: white;
+  border-radius: 5px;
+  display: table-row;
+}
