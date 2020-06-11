@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+
+import configureStore from './configureStore';
+
 import * as serviceWorker from './serviceWorker';
+import Root from './components/Root';
+
+const store = configureStore();
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Root store={store} />,
   document.getElementById('root')
 );
 
