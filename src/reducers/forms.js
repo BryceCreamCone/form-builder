@@ -1,5 +1,15 @@
+import { SAVE_FORM } from '../actions/actionCreators';
+
 export default function formState(state = { activeForm: null, forms: [] }, action) {
-  return {
-    ...state,
+  switch (action.type) {
+    case SAVE_FORM:
+      return {
+        ...state,
+        forms: [
+          action.fields,
+        ]
+      }
+    default:
+      return state;
   }
 }
