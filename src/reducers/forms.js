@@ -6,6 +6,7 @@ export default function formState(state = { activeForm: null, forms: [] }, actio
       return {
         ...state,
         forms: [
+          ...state.forms,
           action.fields,
         ]
       }
