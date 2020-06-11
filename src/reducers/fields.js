@@ -1,14 +1,12 @@
 import { ADD_FIELD } from '../actions/actionCreators';
 
-export default function fields(state = {}, action) {
+export default function fields(state = [], action) {
   switch (action.type) {
     case ADD_FIELD:
-      return {
+      return [
         ...state,
-        formInProgress: [
-          action.fieldType,
-        ],
-      };
+        action.fieldType,
+      ];
     default:
       return state;
   }
