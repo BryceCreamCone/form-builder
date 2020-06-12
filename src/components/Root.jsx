@@ -4,12 +4,16 @@ import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import App from './App'
 import FormMaker from './FormMaker/FormMaker'
+import FormPicker from './FormPicker/FormPicker'
+import FormPreview from './FormPreview/FormPreview'
 
 const Root = ({ store }) => (
   <Provider store={store}>
     <Router>
       <Route exact path="/:filter?" component={App} />
-      <Route exact path="/forms/create" component={FormMaker} />
+      <Route exact path="/forms" component={FormPicker} />
+      <Route exact path="/forms/:id" component={FormPreview} />
+      <Route exact path="/create/form" component={FormMaker} />
     </Router>
   </Provider>
 )

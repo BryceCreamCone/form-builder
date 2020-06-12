@@ -1,4 +1,4 @@
-import { SAVE_FORM } from '../actions/actionCreators';
+import { SAVE_FORM, SET_ACTIVE_FORM } from '../actions/actionCreators';
 
 export default function formState(state = { activeForm: null, forms: [] }, action) {
   switch (action.type) {
@@ -9,7 +9,12 @@ export default function formState(state = { activeForm: null, forms: [] }, actio
           ...state.forms,
           action.fields,
         ]
-      }
+      };
+    case SET_ACTIVE_FORM:
+      return {
+        ...state,
+        activeForm: action.index,
+      };
     default:
       return state;
   }

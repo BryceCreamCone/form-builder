@@ -1,9 +1,10 @@
 .form-preview-container {
-  margin-left: 20px;
-  max-width: 50%;
+  width: 45%;
+  margin-right: 10%;
 }
 
 .form-preview {
+  width: fit-content;
   padding: 10px;
   border: 3px outset;
   border-radius: 5px;

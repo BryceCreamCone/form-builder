@@ -1,8 +1,9 @@
 .fields-selector {
   height: 200px;
-  margin: 20px;
   padding: 10px;
   display: table;
+  width: 20%;
+  margin-right: 5%;
 }
 
 .fields-selector>h3 {
