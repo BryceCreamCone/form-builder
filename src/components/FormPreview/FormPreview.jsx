@@ -27,6 +27,9 @@ class FormPreview extends React.Component {
           <Link to="/create/form" onClick={() => setActiveForm(null)}>
             <button className="edit-form" disabled={!match}>Back To Form Maker</button>
           </Link>
+          <Link to="/">
+            <button className="return-home">Home Page</button>
+          </Link>
         </div>
       </div >
     )
