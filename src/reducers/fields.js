@@ -1,4 +1,4 @@
-import { ADD_FIELD } from '../actions/actionCreators';
+import { ADD_FIELD, DELETE_FIELDS } from '../actions/actionCreators';
 
 export default function fields(state = [], action) {
   switch (action.type) {
@@ -7,6 +7,8 @@ export default function fields(state = [], action) {
         ...state,
         action.fieldType,
       ];
+    case DELETE_FIELDS:
+      return [];
     default:
       return state;
   }
