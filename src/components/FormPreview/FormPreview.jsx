@@ -6,7 +6,6 @@ import { saveForm } from '../../actions/actionCreators';
 
 class FormPreview extends React.Component {
   render() {
-    console.log(this)
     const { fields, saveForm, match } = this.props;
     return (
       <div className="form-preview-container">
@@ -23,8 +22,8 @@ class FormPreview extends React.Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  const { formState } = state
-  if (formState.activeForm) {
+  const { formState, match } = state
+  if (formState.activeForm && match) {
     return {
       fields: formState.forms[formState.activeForm],
       params: ownProps.filter,
