@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import './fieldAdder.css';
 
 import Input from './Input';
+import TextArea from './TextArea';
 
 import { addField } from '../../actions/actionCreators';
 
@@ -30,7 +31,12 @@ class FieldAdder extends React.Component {
             <Input />
           </div>
         </button>
-        <button className="field" onClick={this.handleClick}>TextArea</button>
+        <button className="field" onClick={this.handleClick}>
+          TextArea
+          <div className="hidden">
+            <TextArea />
+          </div>
+        </button>
       </div>
     )
   }
