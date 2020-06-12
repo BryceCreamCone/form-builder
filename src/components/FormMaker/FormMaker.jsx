@@ -1,12 +1,12 @@
 import React from 'react';
-import Fields from '../Fields/Fields';
+import FieldAdder from '../Fields/FieldAdder';
 import FormPreview from '../FormPreview/FormPreview';
 import FormPicker from '../FormPicker/FormPicker';
 import './formMaker.css';
 
 const FormMaker = () => (
   <div className="form-maker">
-    <Fields />
+    <FieldAdder />
     <FormPreview />
     <FormPicker />
   </div>

@@ -18,3 +18,7 @@ button.field {
   border-radius: 5px;
   display: table-row;
 }
+
+.hidden {
+  display: none;
+}
