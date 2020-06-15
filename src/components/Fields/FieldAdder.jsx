@@ -4,6 +4,7 @@ import './fieldAdder.css';
 
 import Input from './Input';
 import TextArea from './TextArea';
+import SelectDropDown from './SelectDropDown';
 
 import { addField } from '../../actions/actionCreators';
 
@@ -35,6 +36,12 @@ class FieldAdder extends React.Component {
           TextArea
           <div className="hidden">
             <TextArea />
+          </div>
+        </button>
+        <button className="field" onClick={this.handleClick}>
+          Select (dropdown)
+          <div className="hidden">
+            <SelectDropDown />
           </div>
         </button>
       </div>

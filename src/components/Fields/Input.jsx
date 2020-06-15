@@ -1,10 +1,10 @@
 import React from 'react'
-import './input.css';
+import './fieldButtons.css';
 
 const Input = (key) => (
-  <div className="input-container">
-    <label htmlFor="input" key={key}>Label</label><br />
-    <input name="input" type="text" placeholder="Text Input" />
+  <div className="input-container" key={key}>
+    <label htmlFor={`input${key}`}>Label</label><br />
+    <input name={`input${key}`} type="text" placeholder="Text Input" />
   </div>
 )
 

@@ -1,10 +1,10 @@
 import React from 'react';
-import './textArea.css';
+import './fieldButtons.css';
 
-const TextArea = () => (
-  <div className="text-area-container">
-    <label htmlFor="text-area">Label</label><br />
-    <textarea name="text-area" type="text" placeholder="Text Area" />
+const TextArea = (key) => (
+  <div className="text-area-container" key={key}>
+    <label htmlFor={`text-area${key}`}>Label</label><br />
+    <textarea name={`text-area${key}`} type="text" placeholder="Text Area" />
   </div>
 )
 

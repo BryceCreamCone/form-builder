@@ -1,0 +1,12 @@
+.input-container,
+.text-area-container,
+.select-drop-down {
+  margin-left: 5px;
+  padding: 5px;
+}
+
+input,
+textarea,
+select {
+  margin-top: 5px;
+}
