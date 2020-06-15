@@ -1,10 +1,18 @@
 export const ADD_FIELD = 'ADD_FIELD';
+export const DELETE_FIELD = 'DELETE_FIELD';
 export const DELETE_FIELDS = 'DELETE_FIELDS';
 
 export function addField(fieldType) {
   return {
     type: ADD_FIELD,
     fieldType,
+  }
+}
+
+export function deleteField(id) {
+  return {
+    type: DELETE_FIELD,
+    id,
   }
 }
 

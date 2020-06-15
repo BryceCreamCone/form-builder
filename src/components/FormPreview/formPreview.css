@@ -16,6 +16,16 @@
   text-align: center;
 }
 
+.form-field>span {
+  opacity: 0;
+}
+
+.form-field>span:hover {
+  opacity: 1;
+  cursor: pointer;
+  color: red;
+}
+
 button {
   background: darkblue;
   margin: 5px;

@@ -3,11 +3,11 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import parse from 'html-react-parser';
 import './formPreview.css';
-import { deleteFields, saveForm, setActiveForm } from '../../actions/actionCreators';
+import { deleteField, deleteFields, saveForm, setActiveForm } from '../../actions/actionCreators';
 
 class FormPreview extends React.Component {
   render() {
-    const { fields, match, deleteFields, saveForm, setActiveForm } = this.props;
+    const { fields, match, deleteField, deleteFields, saveForm, setActiveForm } = this.props;
     return (
       <div className="form-preview-container">
         <h3>Form Preview</h3>
@@ -15,6 +15,7 @@ class FormPreview extends React.Component {
           <div className="form-preview">
             {fields.map((value, key) => (
               <div className="form-field" key={key}>
+                <span onClick={() => deleteField(key)}>&times;</span>
                 {parse(value)}
               </div>
             ))}
@@ -48,4 +49,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, { deleteFields, saveForm, setActiveForm })(FormPreview);
+export default connect(mapStateToProps, { deleteField, deleteFields, saveForm, setActiveForm })(FormPreview);
