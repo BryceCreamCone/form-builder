@@ -5,16 +5,11 @@ import './fieldAdder.css';
 import Input from './Input';
 import TextArea from './TextArea';
 import SelectDropDown from './SelectDropDown';
+import RadioInput from './RadioInput';
+import SubmitButton from './SubmitButton';
+
 
 import { addField } from '../../actions/actionCreators';
-
-// const aFields = ({ addField }) => (
-//   <div className="fields-selector">
-//     <h3>Form Fields</h3>
-//     <button className="field" onClick={(e) => addField(e.target.textContent)}>Input</button>
-//     <button className="field" onClick={(e) => addField(e.target.textContent)}>TextArea</button>
-//   </div>
-// );
 
 class FieldAdder extends React.Component {
   handleClick = (e) => {
@@ -42,6 +37,18 @@ class FieldAdder extends React.Component {
           Select (dropdown)
           <div className="hidden">
             <SelectDropDown />
+          </div>
+        </button>
+        <button className="field" onClick={this.handleClick}>
+          Radio Inputs
+          <div className="hidden">
+            <RadioInput />
+          </div>
+        </button>
+        <button className="field" onClick={this.handleClick}>
+          Submit Button
+          <div className="hidden">
+            <SubmitButton />
           </div>
         </button>
       </div>

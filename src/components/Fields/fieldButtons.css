@@ -1,6 +1,7 @@
 .input-container,
 .text-area-container,
-.select-drop-down {
+.select-drop-down,
+.radio-container {
   margin-left: 5px;
   padding: 5px;
 }
