@@ -6,22 +6,20 @@ import './formPreview.css';
 import { deleteFields, saveForm, setActiveForm } from '../../actions/actionCreators';
 
 class FormPreview extends React.Component {
-  renderFields(value, key) {
-    const firstSpace = value.indexOf(' ');
-    const newValue =
-      value.slice(0, firstSpace) +
-      ` key=${key} ` +
-      value.slice(firstSpace);
-    return parse(newValue);
-  }
   render() {
     const { fields, match, deleteFields, saveForm, setActiveForm } = this.props;
     return (
       <div className="form-preview-container">
         <h3>Form Preview</h3>
-        <div className="form-preview">
-          {fields.map((value, key) => this.renderFields(value, key))}
-        </div>
+        <form>
+          <div className="form-preview">
+            {fields.map((value, key) => (
+              <div className="form-field" key={key}>
+                {parse(value)}
+              </div>
+            ))}
+          </div>
+        </form>
         <div className="form-preview-footer">
           <button className="save-form" disabled={!!match} onClick={() => saveForm(fields)}>Save Form</button>
           <button className="save-form" disabled={!!match} onClick={() => deleteFields()}>Clear Fields</button>
